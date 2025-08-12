@@ -34,7 +34,7 @@ The number of examples per class and the class distribution are unknown and coul
 
 Labels may be subjective, leading to some overlap between disciplines.
 
-Limited labeled data could require manual labeling to expand the dataset before modeling.
+Limited labeled data could require manual labeling to expand the dataset before modeling .
 
 1.6 Next Steps
 
