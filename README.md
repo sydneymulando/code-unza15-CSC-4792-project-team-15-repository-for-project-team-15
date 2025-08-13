@@ -27,14 +27,13 @@ Long-term Success: Once project requirements are fully defined, the target metri
 Success will also be measured by stakeholder feedback on the interpretability of the results and the usefulness of the proposed classification output.
 
 1.5 Assumptions and Risks
-
 We assume access to a labeled dataset of articles (titles, abstracts, and discipline labels).
 
 The number of examples per class and the class distribution are unknown and could affect model choice.
 
 Labels may be subjective, leading to some overlap between disciplines.
 
-Limited labeled data could require manual labeling to expand the dataset before modeling .
+Limited labeled data could require manual labeling to expand the dataset before modeling.
 
 1.6 Next Steps
 
