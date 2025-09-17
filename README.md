@@ -1,42 +1,22 @@
-# Journal-article-classifier-model
-A data mining project build by 5 students from the University of zambia that preprocesses text by cleaning and tokenizing it, extracting features  from text such as word counts or TF-IDF values, train a model using machine learning algorithms on labeled data and predict the discipline of new or unseen journal articles of new or unseen journal articles by applying the trained model to their titles and abstracts, assigning the most probable discipline label.
+Article Classifier Model For The Journal Of Law And Social Sciences(JLSS)
+
+The A data mining project built by 5 Software engineering students from the University of zambia that takes in article title and article abstract as input  to predict the discipline(output) from which the article belongs to in the Journal of Law and Social Sciences (JLSS). The Project is Implemented in reference to the CRSIP-DM methodology that comprises of Six(6) phases which are Business Understanding, Data Understanding, Data preparation, Modeling, Evaluation and Deployment. On each phase of the methodology, necessary steps have been implemented to make the article classifier model work which are demonstrated in the google colab book and documented in this readME file
+
 Here's a link to our notebook: https://colab.research.google.com/drive/1buSf5TT9KbDICSrGmvXsFq_adKhiQZFj?usp=sharing
 
 
-##1.Business Understanding
-###1.1 Introduction
-The Journal of Law and Social Sciences publishes articles spanning multiple disciplines (for example, criminal law, constitutional law, sociology of law, public policy, criminology, legal theory, etc.). Categorization is currently manual and inconsistent, which makes search, browsing, and content recommendation inefficient. This project will develop an automatic text classification system that predicts an article’s discipline from its title and abstract, improving discoverability and reducing editorial effort.
+HOW TO RUN THE ARTICLE CLASSIFIER MODEL
 
-###1.2 Business Objectives
-Primary objectives:
+1. Clone the repository
+2. Install PYTHON, FLASK (a lightweight framework for python that lets you build fast servers), FITS[pyMupdf]( a library that extracts text from PDF), and JOBLIB(a library that allows you to save python objects into a pickle file), REQUESTS(a library that allows to handle HTTP requests) and JSONIFY( a library that allows one to convert python dictionaries to JSON responses).
+3. (OPTIONAL but essential) Ensure that the pickle files, "naive_bayes_model.pkl" and "tfidf_vectorizer.pkl", are copied into the main directory for the flask application to run.
+4. In  the main directory of the Project, Run the following command in CLI: "python classifier_model.py"
+5. After running the command, Copy the HTTP link that will be rendered in CMD and paste it in the browser of your choice. The GUI of the article classifier model will be displayed and one can be able to add a PDF as input( an article with both TITLE and ARTICLE which are inputs it takes in) and when the "predict" button is clicked, the discipline of the article is predicted alongside the confidence level of that prediction.
 
-Automate classification of journal articles into discipline categories to speed up editorial workflows and enhance content discovery.
 
-Success at this stage means producing a prototype that demonstrates that article titles and abstracts can be used to predict the correct discipline with a level of accuracy 75% ,but may be improved after further iterations. The exact performance threshold will be confirmed once more requirements are clarified.
 
-###1.3 Data Mining Goals Build an initial supervised classification model that can assign one of the predefined disciplines to a given journal article, using only its title and abstract as input features.
 
-Document and evaluate preprocessing and modeling choices to ensure results are reproducible and explainable.
 
-These goals may be adjusted once the available data is fully understood.
 
-###1.4 Initial Success Criteria Given that this is an early-stage CRISP-DM Business Understanding phase:
 
-Initial Iteration: The model should demonstrate and show clear potential for improvement. As an initial target, an accuracy of ≥ 70% would indicate feasibility.
 
-Long-term Success: Once project requirements are fully defined, the target metrics will be refined to match editorial expectations e.g 85% accuracy
-
-Success will also be measured by stakeholder feedback on the interpretability of the results and the usefulness of the proposed classification output.
-
-###1.5 Assumptions and Risks
-We assume access to a labeled dataset of articles (titles, abstracts, and discipline labels).
-
-The number of examples per class and the class distribution are unknown and could affect model choice.
-
-Labels may be subjective, leading to some overlap between disciplines.
-
-Limited labeled data could require manual labeling to expand the dataset before modeling.
-
-###1.6 Next Steps
-
-1.Confirm scope and requirements with my team members 2.Assess data availability 3.confirm the size 4.quality 5.completeness of the dataset. 6.Proceed to Data Understanding phase (perform exploratory data analysis to examine class balance, text length, and potential preprocessing needs.)
